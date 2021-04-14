@@ -88,3 +88,15 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+ComposableContextsArchitecture/ComposableContextsArchitecture.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ComposableContextsArchitecture/ComposableContextsArchitecture.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ComposableContextsArchitecture/ComposableContextsArchitecture.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved

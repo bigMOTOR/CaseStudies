@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bDk-eR-sHe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Secondary Controller-->
+        <scene sceneID="4T7-Nb-r6O">
+            <objects>
+                <viewController id="bDk-eR-sHe" customClass="SecondaryController" customModule="ComposableContextsArchitecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lvk-s9-5Jf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-df-p9y">
+                                <rect key="frame" x="30" y="427.5" width="354" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78M-Kp-l4h">
+                                <rect key="frame" x="183" y="279.5" width="48" height="48"/>
+                                <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="jcA-ck-oOY"/>
+                                    <constraint firstAttribute="width" constant="48" id="ysP-WB-yhZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mMc-lu-oVZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ScX-df-p9y" firstAttribute="centerX" secondItem="lvk-s9-5Jf" secondAttribute="centerX" id="43h-th-bHm"/>
+                            <constraint firstItem="ScX-df-p9y" firstAttribute="centerY" secondItem="lvk-s9-5Jf" secondAttribute="centerY" id="5oH-oc-2ID"/>
+                            <constraint firstItem="ScX-df-p9y" firstAttribute="leading" secondItem="mMc-lu-oVZ" secondAttribute="leading" constant="30" id="6oA-85-6Fk"/>
+                            <constraint firstItem="ScX-df-p9y" firstAttribute="top" secondItem="78M-Kp-l4h" secondAttribute="bottom" constant="100" id="I2s-Oh-Dv0"/>
+                            <constraint firstItem="mMc-lu-oVZ" firstAttribute="trailing" secondItem="ScX-df-p9y" secondAttribute="trailing" constant="30" id="X5E-HL-i1p"/>
+                            <constraint firstItem="78M-Kp-l4h" firstAttribute="centerX" secondItem="lvk-s9-5Jf" secondAttribute="centerX" id="bnW-VF-AKH"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="dipTag" value="Secondary"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="colorCircle" destination="78M-Kp-l4h" id="8bC-TI-FbR"/>
+                        <outlet property="someLabel" destination="ScX-df-p9y" id="786-04-yUj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rna-ip-C2P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="-166"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
