@@ -23,7 +23,9 @@ final class SecondaryController: UIViewController {
       .drive(colorCircle.rx.backgroundColor)
       .disposed(by: _bag)
     
-    someLabel.text = viewModel.info
+    viewModel.info
+      .drive(someLabel.rx.text)
+      .disposed(by: _bag)
   }
 
 }

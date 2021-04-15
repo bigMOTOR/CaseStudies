@@ -13,7 +13,7 @@ enum SecondaryComposition {
     
     // UseCases
     container.register {
-      SecondaryContext(colorRepository: $0)
+      SecondaryContext(colorRepository: $0, symbolRepository: $1)
     }
     .implements(SecondaryViewModel.UseCases.self)
     
@@ -36,12 +36,15 @@ enum SecondaryComposition {
 extension SecondaryController: StoryboardInstantiatable {}
 
 // MARK: Context
-private final class SecondaryContext: ColorRepositoryHolderType {
+private final class SecondaryContext: ColorRepositoryHolderType, SymbolRepositoryHolderType {
   let colorRepository: ColorRepositoryType
+  let symbolRepository: SymbolRepositoryType
 
-  init(colorRepository: ColorRepositoryType) {
+  init(colorRepository: ColorRepositoryType, symbolRepository: SymbolRepositoryType) {
     self.colorRepository = colorRepository
+    self.symbolRepository = symbolRepository
   }
 }
 
 extension SecondaryContext: ObserveColorUseCase {}
+extension SecondaryContext: ObserveSymbolUseCase {}

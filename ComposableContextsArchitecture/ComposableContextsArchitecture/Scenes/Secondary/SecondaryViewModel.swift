@@ -11,16 +11,19 @@ import RxSwift
 import RxCocoa
 
 struct SecondaryViewModel {
-  typealias UseCases = ObserveColorUseCase
+  typealias UseCases = ObserveColorUseCase & ObserveSymbolUseCase
   
   let keyColor: Driver<UIColor>
-  let info: String
+  let info: Driver<String>
   
   init(useCases: UseCases, infoFromMain: String) {
     self.keyColor = useCases.randomColor
       .distinctUntilChanged()
       .asDriver(onErrorDriveWith: .empty())
     
-    self.info = infoFromMain
+    self.info = useCases.randomSymbol
+      .map { "\($0): \(infoFromMain)" }
+      .distinctUntilChanged()
+      .asDriver(onErrorDriveWith: .empty())
   }
 }
